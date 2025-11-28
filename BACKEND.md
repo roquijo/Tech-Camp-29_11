@@ -14,7 +14,7 @@ Ve a [https://start.spring.io](https://start.spring.io) y configura:
 
 **Project:** Maven  
 **Language:** Java  
-**Spring Boot:** 3.2.x (o la última estable)  
+**Spring Boot:** 3.x.x (o la última estable)  
 **Packaging:** Jar  
 **Java:** 21
 
@@ -271,4 +271,3 @@ Antes de pasar al frontend, verifica:
 
 **Resultado esperado:**  
 Backend corriendo en `http://localhost:8080`, documentado por Swagger, conectado a PostgreSQL y protegido con JWT simple.
-Backend corriendo en `http://localhost:8080`, documentado por Swagger, conectado a PostgreSQL y protegido por Keycloak.

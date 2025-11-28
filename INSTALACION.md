@@ -1,9 +1,4 @@
 # 🚀 Guía de Instalación y Entorno — Java Spring Boot + Angular + PostgreSQL
-
-> **Guía rápida para clase de 5 horas**  
-> Preparación del entorno de desarrollo local (sin Docker) para construir una aplicación fullstack con Spring Boot, Angular y JWT.  
-> Tiempo estimado: **30 minutos**
-
 ---
 
 ## 📋 Contenido
@@ -174,7 +169,11 @@ psql --version         # Debe mostrar PostgreSQL 12.x o superior
 - Inicia el servicio manualmente si está detenido.
 
 ### Angular CLI no funciona
-- Reinstala: `npm uninstall -g @angular/cli && npm install -g @angular/cli`
+- Reinstala ejecutando estos comandos por separado:
+```bash
+npm uninstall -g @angular/cli
+npm install -g @angular/cli
+```
 
 ---
 
