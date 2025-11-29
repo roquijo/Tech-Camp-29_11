@@ -28,11 +28,42 @@ Ve a [https://start.spring.io](https://start.spring.io) y configura:
 
 **Genera y descarga el proyecto.**
 
+## 1.1 Desactivar seguridad en proyecto
+
+```java
+@Configuration
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+                .formLogin(form -> form.disable())
+                .httpBasic(basic -> basic.disable());
+
+        return http.build();
+    }
+}
+```
+
 ---
 
 ## 2. Dependencias Adicionales (5 minutos)
 
 Abre `pom.xml` y añade estas dependencias después de las que ya vienen:
+
+```xml
+<!-- Swagger/OpenAPI -->
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.3.0</version>
+</dependency>
+```
+
+
+## 2. Dependencias Adicionales (agregar al terminar el crud)
 
 ```xml
 <!-- JWT -->
@@ -53,14 +84,8 @@ Abre `pom.xml` y añade estas dependencias después de las que ya vienen:
     <version>0.12.3</version>
     <scope>runtime</scope>
 </dependency>
-
-<!-- Swagger/OpenAPI -->
-<dependency>
-    <groupId>org.springdoc</groupId>
-    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-    <version>2.3.0</version>
-</dependency>
 ```
+
 
 ---
 
@@ -113,7 +138,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
 
-# JWT Configuration
+
+
+# JWT Configuration, agregar al finalizar el crud
 jwt:
   secret: miClaveSecretaSuperSegura12345678901234567890
   expiration: 86400000  # 24 horas en milisegundos
