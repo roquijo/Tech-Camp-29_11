@@ -14,9 +14,9 @@ Ve a [https://start.spring.io](https://start.spring.io) y configura:
 
 **Project:** Maven  
 **Language:** Java  
-**Spring Boot:** 3.x.x (o la última estable)  
+**Spring Boot:** La última estable 
 **Packaging:** Jar  
-**Java:** 21
+**Java:** 25
 
 **Dependencies a seleccionar:**
 - ✅ Spring Web

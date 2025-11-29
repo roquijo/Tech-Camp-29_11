@@ -28,15 +28,15 @@ Si todos responden correctamente, **¡estás listo!** Si falta algo, sigue las i
 
 ---
 
-## ☕ 1. Java JDK 21 (Temurin / Adoptium) - **SI FALTA**
+## ☕ 1. Java JDK 25 (Temurin / Adoptium) - **SI FALTA**
 
 **Descarga:** https://adoptium.net
 
 ### Pasos rápidos
-1. Descarga e instala Temurin JDK 21 (Windows x64 Installer).
+1. Descarga e instala Temurin JDK 25 (Windows x64 Installer).
 2. Durante la instalación, marca `Set JAVA_HOME`.
 3. Si no aparece, crea manualmente:
-   - `JAVA_HOME` = `C:\Program Files\Eclipse Adoptium\jdk-21`
+   - `JAVA_HOME` = `C:\Program Files\Eclipse Adoptium\jdk-25`
    - Añadir al `Path`: `%JAVA_HOME%\bin`
 
 ### Verificar
@@ -129,7 +129,7 @@ ng version
 
 Si necesitas configurarlas manualmente, ve a **Sistema → Configuración avanzada → Variables de entorno**:
 
-- `JAVA_HOME` = `C:\Program Files\Eclipse Adoptium\jdk-21`
+- `JAVA_HOME` = `C:\Program Files\Eclipse Adoptium\jdk-25`
 - `M2_HOME` = `C:\Program Files\Apache\Maven\apache-maven-3.9.x`
 - `PATH` añadir:
   - `%JAVA_HOME%\bin`
@@ -142,7 +142,7 @@ Si necesitas configurarlas manualmente, ve a **Sistema → Configuración avanza
 Ejecuta estos comandos y verifica que todos respondan:
 
 ```bash
-java -version          # Debe mostrar Java 21
+java -version          # Debe mostrar Java 25
 mvn -version           # Debe mostrar Maven 3.9.x
 node -v                # Debe mostrar v18.x o superior
 npm -v                 # Debe mostrar 9.x o superior
